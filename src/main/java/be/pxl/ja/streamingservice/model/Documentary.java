@@ -1,12 +1,12 @@
 package be.pxl.ja.streamingservice.model;
 
-public class Documentary extends be.pxl.ja.opdracht1.Movie implements Playable{
+public class Documentary extends Movie implements Playable{
 
     private String topic;
 
-    public Documentary(String title, be.pxl.ja.opdracht1.Rating maturityRating, String topic) {
+    public Documentary(String title, Rating maturityRating) {
         super(title, maturityRating);
-        this.topic = topic;
+
         super.setGenre(Genre.DOCUMENTARY);
     }
 

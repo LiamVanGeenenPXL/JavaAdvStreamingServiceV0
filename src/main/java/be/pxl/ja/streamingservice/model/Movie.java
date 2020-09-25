@@ -3,7 +3,7 @@ package be.pxl.ja.streamingservice.model;
 import java.time.LocalDate;
 
 
-public class Movie extends be.pxl.ja.opdracht1.Content implements Playable {
+public class Movie extends Content implements Playable {
     private int duration;
     private String director;
     private LocalDate releasedate;
@@ -12,7 +12,7 @@ public class Movie extends be.pxl.ja.opdracht1.Content implements Playable {
 
 
 
-    public Movie(String title, be.pxl.ja.opdracht1.Rating maturityRating) {
+    public Movie(String title, Rating maturityRating) {
         super(title, maturityRating);
     }
 
@@ -39,7 +39,7 @@ public class Movie extends be.pxl.ja.opdracht1.Content implements Playable {
         return releasedate;
     }
 
-    public void setReleasedate(LocalDate releasedate) {
+    public void setReleaseDate(LocalDate releasedate) {
         this.releasedate = releasedate;
     }
 
@@ -65,5 +65,8 @@ public class Movie extends be.pxl.ja.opdracht1.Content implements Playable {
         this.duration = Math.abs(duration) ;
     }
 
+    public String getPlayingTime(){
+        return (duration/3600)+" u " + ((duration%3600)/60) + " min";
+    }
 }
 
