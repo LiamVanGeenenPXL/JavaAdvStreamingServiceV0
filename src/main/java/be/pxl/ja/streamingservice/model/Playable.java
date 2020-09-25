@@ -4,5 +4,5 @@ public interface Playable {
     int getDuration();
     void play();
     void pause();
-    //test
+    //test2
 }
